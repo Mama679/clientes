@@ -3,9 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http'
+import { ToastrModule } from 'ngx-toastr';
+
 //Componentes propios
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { ListarProductoComponent } from './components/listar-producto/listar-producto.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +21,11 @@ import { ListarProductoComponent } from './components/listar-producto/listar-pro
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
